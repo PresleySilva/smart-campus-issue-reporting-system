@@ -1,0 +1,505 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family: "Poppins", sans-serif;
+
+    color: #172033;
+
+    background: #f1f5f9;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+
+    padding: 18px 7%;
+
+    background: white;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    display: flex;
+    align-items: center;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.logo > .material-symbols-outlined {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #0f766e
+    );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+}
+
+
+.logo h2 {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #1e3a8a;
+}
+
+
+.logo p {
+    font-size: 10px;
+
+    color: #64748b;
+
+    margin-top: 1px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 55px 20px;
+}
+
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+
+    text-align: center;
+}
+
+
+/* Hero icon */
+
+.hero-icon {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 20px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #1e3a8a,
+        #0f766e
+    );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 10px 25px rgba(30, 58, 138, 0.2);
+}
+
+
+.hero-icon .material-symbols-outlined {
+    font-size: 38px;
+}
+
+
+/* Heading */
+
+.hero-content h1 {
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    color: #172033;
+
+    font-weight: 700;
+}
+
+
+.hero-content > h2 {
+    font-size: 21px;
+
+    font-weight: 500;
+
+    color: #0f766e;
+
+    margin-top: 7px;
+}
+
+
+.hero-content > p {
+    max-width: 600px;
+
+    margin: 15px auto 35px;
+
+    color: #64748b;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   LOGIN BUTTONS
+========================= */
+
+.login-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+.login-card {
+    position: relative;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition: 0.25s ease;
+
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.04);
+}
+
+
+.login-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #bfdbfe;
+
+    box-shadow: 0 15px 30px rgba(30, 58, 138, 0.12);
+}
+
+
+.login-card:active {
+    transform: translateY(-2px);
+}
+
+
+/* Card icon */
+
+.card-icon {
+    width: 52px;
+    height: 52px;
+
+    min-width: 52px;
+
+    border-radius: 13px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card-icon .material-symbols-outlined {
+    font-size: 27px;
+}
+
+
+.student-icon {
+    background: #dbeafe;
+
+    color: #1e3a8a;
+}
+
+
+.teacher-icon {
+    background: #ccfbf1;
+
+    color: #0f766e;
+}
+
+
+/* Card text */
+
+.card-text {
+    flex: 1;
+}
+
+
+.card-text h3 {
+    font-size: 15px;
+
+    margin-bottom: 3px;
+}
+
+
+.card-text p {
+    font-size: 10px;
+
+    color: #64748b;
+
+    line-height: 1.5;
+}
+
+
+/* Arrow */
+
+.arrow {
+    color: #94a3b8;
+
+    font-size: 22px;
+
+    transition: 0.25s ease;
+}
+
+
+.login-card:hover .arrow {
+    color: #1e3a8a;
+
+    transform: translateX(4px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+
+    padding: 18px;
+
+    border-top: 1px solid #e2e8f0;
+
+    background: white;
+}
+
+
+.footer p {
+    color: #94a3b8;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+/* Tablets */
+
+@media (max-width: 768px) {
+
+    .header {
+        padding: 16px 5%;
+    }
+
+
+    .hero {
+        padding: 45px 20px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+
+    .hero-content > h2 {
+        font-size: 19px;
+    }
+
+
+    .login-buttons {
+        max-width: 600px;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 14px 20px;
+    }
+
+
+    .logo h2 {
+        font-size: 16px;
+    }
+
+
+    .logo p {
+        font-size: 9px;
+    }
+
+
+    .logo > .material-symbols-outlined {
+        width: 40px;
+        height: 40px;
+
+        font-size: 22px;
+    }
+
+
+    .hero {
+        padding: 40px 18px;
+    }
+
+
+    .hero-icon {
+        width: 62px;
+        height: 62px;
+
+        border-radius: 17px;
+    }
+
+
+    .hero-icon .material-symbols-outlined {
+        font-size: 32px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+
+    .hero-content > h2 {
+        font-size: 16px;
+    }
+
+
+    .hero-content > p {
+        font-size: 12px;
+
+        margin-bottom: 28px;
+    }
+
+
+    .login-buttons {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+
+    .login-card {
+        padding: 17px;
+    }
+
+}
+
+
+/* Small phones */
+
+@media (max-width: 380px) {
+
+    .hero {
+        padding: 30px 15px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 27px;
+    }
+
+
+    .hero-content > h2 {
+        font-size: 14px;
+    }
+
+
+    .hero-content > p {
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+
+    .card-icon {
+        width: 46px;
+        height: 46px;
+
+        min-width: 46px;
+    }
+
+
+    .card-icon .material-symbols-outlined {
+        font-size: 23px;
+    }
+
+
+    .card-text h3 {
+        font-size: 13px;
+    }
+
+
+    .card-text p {
+        font-size: 9px;
+    }
+
+}

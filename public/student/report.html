@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Report Issue | Smart Campus</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/student.css">
+</head>
+
+<body>
+
+    <!-- ================= MOBILE HEADER ================= -->
+
+    <header class="mobile-header">
+
+        <button class="menu-button" id="menuButton">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <div class="mobile-logo">
+            <strong>SMART CAMPUS</strong>
+            <span>Issue Reporting System</span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= OVERLAY ================= -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="sidebar-logo">
+
+                <div class="sidebar-logo-icon">
+                    <span class="material-symbols-outlined">
+                        school
+                    </span>
+                </div>
+
+                <div>
+                    <h2>SMART CAMPUS</h2>
+                    <p>Issue Reporting System</p>
+                </div>
+
+            </div>
+
+            <button class="close-button" id="closeButton">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </button>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+
+                <span class="material-symbols-outlined">
+                    dashboard
+                </span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="report.html" class="nav-item active">
+
+                <span class="material-symbols-outlined">
+                    report_problem
+                </span>
+
+                <span>Report Issue</span>
+
+            </a>
+
+
+            <a href="my-issues.html" class="nav-item">
+
+                <span class="material-symbols-outlined">
+                    assignment
+                </span>
+
+                <span>My Issues</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html" class="nav-item logout">
+
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- Page heading -->
+
+        <section class="page-heading">
+
+            <div>
+
+                <p class="welcome-small">
+                    Student Dashboard
+                </p>
+
+                <h1>Report an Issue</h1>
+
+                <p>
+                    Tell us about a problem you found on campus.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REPORT FORM ================= -->
+
+        <section class="report-container">
+
+            <div class="report-card">
+
+                <div class="form-title">
+
+                    <div class="form-title-icon">
+                        <span class="material-symbols-outlined">
+                            report_problem
+                        </span>
+                    </div>
+
+                    <div>
+                        <h2>Issue Details</h2>
+
+                        <p>
+                            Please provide accurate information about the issue.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form id="issueForm">
+
+                    <!-- Issue Title -->
+
+                    <div class="form-group">
+
+                        <label for="issueTitle">
+                            Issue Title
+                        </label>
+
+                        <input type="text" id="issueTitle" name="issueTitle"
+                            placeholder="Example: Classroom fan not working" required>
+
+                    </div>
+
+
+                    <!-- Category + Location -->
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="category">
+                                Category
+                            </label>
+
+                            <select id="category" name="category" required>
+
+                                <option value="" selected disabled>
+                                    Select category
+                                </option>
+
+                                <option value="electricity">
+                                    Electricity
+                                </option>
+
+                                <option value="water">
+                                    Water / Plumbing
+                                </option>
+
+                                <option value="cleanliness">
+                                    Cleanliness
+                                </option>
+
+                                <option value="internet">
+                                    Internet / Wi-Fi
+                                </option>
+
+                                <option value="classroom">
+                                    Classroom
+                                </option>
+
+                                <option value="library">
+                                    Library
+                                </option>
+
+                                <option value="security">
+                                    Security
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="location">
+                                Location
+                            </label>
+
+                            <input type="text" id="location" name="location" placeholder="Example: Block A, Room 204"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Description -->
+
+                    <div class="form-group">
+
+                        <label for="description">
+                            Description
+                        </label>
+
+                        <textarea id="description" name="description" rows="6"
+                            placeholder="Describe the issue in detail..." required></textarea>
+
+                    </div>
+
+
+                    <!-- ================= PHOTO UPLOAD ================= -->
+
+                    <div class="form-group">
+
+                        <label>
+                            Add Photo
+                            <span class="optional-text">(Optional)</span>
+                        </label>
+
+                        <div class="photo-upload">
+
+                            <div class="upload-buttons">
+
+                                <!-- Camera -->
+
+                                <label for="cameraInput" class="upload-button">
+
+                                    <span class="material-symbols-outlined">
+                                        photo_camera
+                                    </span>
+
+                                    <span>Take Photo</span>
+
+                                </label>
+
+                                <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
+
+
+                                <!-- Gallery -->
+
+                                <label for="galleryInput" class="upload-button">
+
+                                    <span class="material-symbols-outlined">
+                                        photo_library
+                                    </span>
+
+                                    <span>Choose from Gallery</span>
+
+                                </label>
+
+                                <input type="file" id="galleryInput" accept="image/*" hidden>
+
+                            </div>
+
+
+                            <!-- Image Preview -->
+
+                            <div class="image-preview" id="imagePreview">
+
+                                <span class="material-symbols-outlined">
+                                    image
+                                </span>
+
+                                <p>
+                                    No photo selected
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Priority -->
+
+                    <div class="form-group">
+
+                        <label for="priority">
+                            Priority
+                        </label>
+
+                        <select id="priority" name="priority" required>
+
+                            <option value="" selected disabled>
+                                Select priority
+                            </option>
+
+                            <option value="low">
+                                Low
+                            </option>
+
+                            <option value="medium">
+                                Medium
+                            </option>
+
+                            <option value="high">
+                                High
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Buttons -->
+
+                    <div class="form-buttons">
+
+                        <a href="dashboard.html" class="cancel-button">
+                            Cancel
+                        </a>
+
+                        <button type="submit" class="submit-button">
+
+                            <span class="material-symbols-outlined">
+                                send
+                            </span>
+
+                            Submit Issue
+
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+
+            <!-- Information card -->
+
+            <div class="report-info">
+
+                <span class="material-symbols-outlined">
+                    info
+                </span>
+
+                <div>
+
+                    <h3>Before submitting</h3>
+
+                    <p>
+                        Please make sure the information you provide is
+                        accurate. This will help the college staff resolve
+                        the issue faster.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../javascript/student.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard | Smart Campus</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet">
+
+    <!-- Student CSS -->
+    <link rel="stylesheet" href="../css/student.css">
+</head>
+
+<body>
+
+    <!-- ================= MOBILE HEADER ================= -->
+
+    <header class="mobile-header">
+
+        <button class="menu-button" id="menuButton">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+
+        <div class="mobile-logo">
+            <strong>SMART CAMPUS</strong>
+            <span>Issue Reporting System</span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= SIDEBAR OVERLAY ================= -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <div class="sidebar-logo">
+
+                <div class="sidebar-logo-icon">
+                    <span class="material-symbols-outlined">
+                        school
+                    </span>
+                </div>
+
+                <div>
+                    <h2>SMART CAMPUS</h2>
+                    <p>Issue Reporting System</p>
+                </div>
+
+            </div>
+
+            <!-- Mobile close button -->
+
+            <button class="close-button" id="closeButton">
+
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item active">
+
+                <span class="material-symbols-outlined">
+                    dashboard
+                </span>
+
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="report.html" class="nav-item">
+
+                <span class="material-symbols-outlined">
+                    report_problem
+                </span>
+
+                <span>Report Issue</span>
+
+            </a>
+
+
+            <a href="my-issues.html" class="nav-item">
+
+                <span class="material-symbols-outlined">
+                    assignment
+                </span>
+
+                <span>My Issues</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html" class="nav-item logout" id="studentLogout">
+
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+
+                <span>Logout</span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- Welcome -->
+
+        <section class="welcome-section">
+
+            <div>
+
+                <p class="welcome-small">
+                    Student Dashboard
+                </p>
+
+                <h1>
+                    Welcome, Student! 👋
+                </h1>
+
+                <p class="welcome-description">
+                    Report and track your campus issues easily.
+                </p>
+
+            </div>
+
+
+            <!-- Profile -->
+
+            <div class="student-profile">
+
+                <span class="material-symbols-outlined">
+                    account_circle
+                </span>
+
+                <div>
+
+                    <strong id="studentName">Student</strong>
+
+                    <small id="studentEmail"></small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="quick-actions">
+
+            <!-- Report Issue -->
+
+            <a href="report.html" class="action-card">
+
+                <div class="action-icon report-icon">
+
+                    <span class="material-symbols-outlined">
+                        report_problem
+                    </span>
+
+                </div>
+
+                <div class="action-content">
+
+                    <h3>Report an Issue</h3>
+
+                    <p>
+                        Report a new problem or issue on campus.
+                    </p>
+
+                    <span class="action-link">
+                        Report Now
+
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- My Issues -->
+
+            <a href="my-issues.html" class="action-card">
+
+                <div class="action-icon issues-icon">
+
+                    <span class="material-symbols-outlined">
+                        assignment
+                    </span>
+
+                </div>
+
+                <div class="action-content">
+
+                    <h3>My Issues</h3>
+
+                    <p>
+                        View and track the issues you have reported.
+                    </p>
+
+                    <span class="action-link">
+                        View Issues
+
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+                    </span>
+
+                </div>
+
+            </a>
+
+        </section>
+
+
+        <!-- ================= ISSUE SUMMARY ================= -->
+
+        <section class="summary-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>My Issue Summary</h2>
+
+                    <p>
+                        Overview of your reported campus issues.
+                    </p>
+
+                </div>
+
+                <span class="material-symbols-outlined heading-icon">
+                    analytics
+                </span>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <!-- Total -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon total-icon">
+
+                        <span class="material-symbols-outlined">
+                            assignment
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>Total Issues</p>
+
+                        <h3 id="studentTotalIssuesCount">0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Pending -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon pending-icon">
+
+                        <span class="material-symbols-outlined">
+                            pending
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>Pending</p>
+
+                        <h3 id="studentPendingIssuesCount">0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- In Progress -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon progress-icon">
+
+                        <span class="material-symbols-outlined">
+                            sync
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>In Progress</p>
+
+                        <h3 id="studentInProgressIssuesCount">0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Resolved -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon resolved-icon">
+
+                        <span class="material-symbols-outlined">
+                            check_circle
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>Resolved</p>
+
+                        <h3 id="studentResolvedIssuesCount">0</h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RECENT ISSUES ================= -->
+
+        <section class="recent-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Recent Issues</h2>
+
+                    <p>
+                        Your recently reported campus issues.
+                    </p>
+
+                </div>
+
+                <a href="my-issues.html" class="view-all">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="recent-card" id="recentIssuesList">
+
+                <!-- Issue will be loaded from api -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Student JavaScript -->
+
+    <script src="../javascript/student.js"></script>
+
+</body>
+
+</html>

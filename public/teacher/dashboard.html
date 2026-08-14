@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Dashboard | Smart Campus</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet">
+
+    <!-- Teacher CSS -->
+    <link rel="stylesheet" href="../css/teacher.css">
+</head>
+
+<body>
+
+    <!-- ================= MOBILE HEADER ================= -->
+
+    <header class="teacher-mobile-header">
+
+        <button class="teacher-menu-button" id="teacherMenuButton">
+
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+
+        </button>
+
+        <div class="teacher-mobile-logo">
+
+            <strong>SMART CAMPUS</strong>
+
+            <span>
+                Issue Reporting System
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= OVERLAY ================= -->
+
+    <div
+        class="teacher-sidebar-overlay"
+        id="teacherSidebarOverlay">
+    </div>
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside
+        class="teacher-sidebar"
+        id="teacherSidebar">
+
+        <div class="teacher-sidebar-header">
+
+            <div class="teacher-sidebar-logo">
+
+                <div class="teacher-logo-icon">
+
+                    <span class="material-symbols-outlined">
+                        school
+                    </span>
+
+                </div>
+
+                <div>
+
+                    <h2>SMART CAMPUS</h2>
+
+                    <p>
+                        Issue Reporting System
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mobile close -->
+
+            <button
+                class="teacher-close-button"
+                id="teacherCloseButton">
+
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+
+            </button>
+
+        </div>
+
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <nav class="teacher-sidebar-nav">
+
+            <a
+                href="dashboard.html"
+                class="teacher-nav-item active">
+
+                <span class="material-symbols-outlined">
+                    dashboard
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="#recentIssues"
+                class="teacher-nav-item"
+                id="reportedIssuesButton">
+
+                <span class="material-symbols-outlined">
+                    assignment
+                </span>
+
+                <span>
+                    Reported Issues
+                </span>
+
+            </a>
+
+
+            <a
+                href="#pendingIssues"
+                class="teacher-nav-item"
+                id="pendingIssuesButton">
+
+                <span class="material-symbols-outlined">
+                    pending_actions
+                </span>
+
+                <span>
+                    Pending Issues
+                </span>
+
+            </a>
+
+
+            <a
+                href="#resolvedIssues"
+                class="teacher-nav-item"
+                id="resolvedIssuesButton">
+
+                <span class="material-symbols-outlined">
+                    check_circle
+                </span>
+
+                <span>
+                    Resolved Issues
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- ================= LOGOUT ================= -->
+
+        <div class="teacher-sidebar-bottom">
+
+            <a
+                href="../index.html"
+                class="teacher-nav-item teacher-logout"
+                id="teacherLogout">
+
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+
+                <span>
+                    Logout
+                </span>
+
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="teacher-main-content">
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <section class="teacher-welcome">
+
+            <div>
+
+                <p class="teacher-welcome-small">
+                    Teacher Dashboard
+                </p>
+
+                <h1>
+                    Welcome, Teacher! 👋
+                </h1>
+
+                <p class="teacher-welcome-description">
+                    Monitor and manage campus issues reported by students.
+                </p>
+
+            </div>
+
+
+            <!-- Teacher Profile -->
+
+            <div class="teacher-profile">
+
+                <span class="material-symbols-outlined">
+                    account_circle
+                </span>
+
+                <div>
+
+                    <strong id="teacherName">
+                        Teacher
+                    </strong>
+
+                    <small id="teacherEmail">
+                        teacher01@smartcampus.edu
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STATISTICS ================= -->
+
+        <section class="teacher-stats-section">
+
+            <div class="teacher-section-heading">
+
+                <div>
+
+                    <h2>
+                        Issue Overview
+                    </h2>
+
+                    <p>
+                        Current status of reported campus issues.
+                    </p>
+
+                </div>
+
+                <span class="material-symbols-outlined">
+                    analytics
+                </span>
+
+            </div>
+
+
+            <div class="teacher-stats-grid">
+
+
+                <!-- Total -->
+
+                <div class="teacher-stat-card">
+
+                    <div class="teacher-stat-icon total">
+
+                        <span class="material-symbols-outlined">
+                            assignment
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Total Issues
+                        </p>
+
+                        <h3 id="totalIssuesCount">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Pending -->
+
+                <div class="teacher-stat-card">
+
+                    <div class="teacher-stat-icon pending">
+
+                        <span class="material-symbols-outlined">
+                            pending
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Pending
+                        </p>
+
+                        <h3 id="pendingIssuesCount">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- In Progress -->
+
+                <div class="teacher-stat-card">
+
+                    <div class="teacher-stat-icon progress">
+
+                        <span class="material-symbols-outlined">
+                            sync
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>
+                            In Progress
+                        </p>
+
+                        <h3 id="inProgressIssuesCount">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Resolved -->
+
+                <div class="teacher-stat-card">
+
+                    <div class="teacher-stat-icon resolved">
+
+                        <span class="material-symbols-outlined">
+                            check_circle
+                        </span>
+
+                    </div>
+
+                    <div>
+
+                        <p>
+                            Resolved
+                        </p>
+
+                        <h3 id="resolvedIssuesCount">
+                            0
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PRIORITY ALERT ================= -->
+
+        <section
+            class="teacher-priority-card"
+            id="pendingIssues">
+
+            <div class="teacher-priority-icon">
+
+                <span class="material-symbols-outlined">
+                    priority_high
+                </span>
+
+            </div>
+
+            <div class="teacher-priority-content">
+
+                <h3 id="highPriorityCount">
+                    0 High Priority Issues
+                </h3>
+
+                <p>
+                    Some reported issues require immediate attention.
+                </p>
+
+            </div>
+
+            <button
+                class="teacher-priority-button"
+                id="priorityButton">
+
+                View
+
+                <span class="material-symbols-outlined">
+                    arrow_forward
+                </span>
+
+            </button>
+
+        </section>
+
+
+        <!-- ================= RECENT ISSUES ================= -->
+
+        <section
+            class="teacher-recent-section"
+            id="recentIssues">
+
+            <div class="teacher-section-heading">
+
+                <div>
+
+                    <h2>
+                        Recent Reported Issues
+                    </h2>
+
+                    <p>
+                        Issues recently submitted by students.
+                    </p>
+
+                </div>
+
+
+                <!-- Filter -->
+
+                <div class="teacher-filter">
+
+                    <span>
+                        Filter:
+                    </span>
+
+                    <select id="teacherStatusFilter">
+
+                        <option value="all">
+                            All
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="progress">
+                            In Progress
+                        </option>
+
+                        <option value="resolved">
+                            Resolved
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- Issues -->
+
+            <div
+                class="teacher-issues-card"
+                id="teacherIssuesList">
+
+
+            <!-- Empty state -->
+
+            <div
+                class="teacher-no-issues"
+                id="teacherNoIssues">
+
+                <span class="material-symbols-outlined">
+                    search_off
+                </span>
+
+                <h3>
+                    No issues found
+                </h3>
+
+                <p>
+                    No issues match the selected filter.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../javascript/teacher.js"></script>
+
+</body>
+
+</html>

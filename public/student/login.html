@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Login | Smart Campus</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        rel="stylesheet">
+
+    <!-- Login CSS -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <div class="login-container">
+
+            <!-- Logo -->
+
+            <div class="login-logo">
+
+                <div class="logo-icon">
+                    <span class="material-symbols-outlined">
+                        school
+                    </span>
+                </div>
+
+                <h1>SMART CAMPUS</h1>
+
+                <p>Issue Reporting System</p>
+
+            </div>
+
+
+            <!-- Login Card -->
+
+            <div class="login-card">
+
+                <div class="card-heading">
+
+                    <h2>Student Login</h2>
+
+                    <p>
+                        Login to report and track campus issues
+                    </p>
+
+                </div>
+
+
+                <form id="studentLoginForm">
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Student Email
+                        </label>
+
+                        <div class="input-container">
+
+                            <span class="material-symbols-outlined">
+                                mail
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="student01@smartcampus.edu"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <div class="input-container">
+
+                            <span class="material-symbols-outlined">
+                                lock
+                            </span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter Password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="togglePassword"
+                                aria-label="Show password"
+                            >
+                                <span class="material-symbols-outlined">
+                                    visibility
+                                </span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Login Button -->
+
+                    <button type="submit" class="login-button">
+
+                        <span>Login</span>
+
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span>
+
+                    </button>
+
+                </form>
+
+
+                <!-- Back -->
+
+                <a href="../index.html" class="back-home">
+
+                    <span class="material-symbols-outlined">
+                        arrow_back
+                    </span>
+
+                    Back to Home
+
+                </a>
+
+            </div>
+
+
+            <!-- Footer -->
+
+            <p class="login-footer">
+                © 2026 Smart Campus Issue Reporting System
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="../javascript/script.js"></script>
+
+</body>
+
+</html>
