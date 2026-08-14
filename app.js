@@ -5,7 +5,7 @@ const db = require("./db");
 
 const app = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 
 // =========================
@@ -290,6 +290,8 @@ app.use(express.static(
 ));
 
 
+
+
 // =========================
 // TEST API
 // =========================
@@ -349,7 +351,7 @@ app.get("/api/issues", requireLogin, async (req, res) => {
                 ORDER BY date DESC
             `);
 
-}
+        }
 
         res.json({
             success: true,
