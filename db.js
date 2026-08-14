@@ -1,10 +1,10 @@
 const mysql = require("mysql2/promise");
 
 const db = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "nick@1234",
-    database: "smart_campus",
+    host: "sql.freedb.tech",
+    user: "u_Z1Rl7U",
+    password: "ZW8Gh98JfdwA",
+    database: "freedb_aDoZFBIT",
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
